@@ -36,9 +36,18 @@ int main(void)
                  if(extract < extract2)
                      printf("Byte 0 is smaller\n");
                  else
+                 {
                      printf("Byte 1 is smaller\n");
+                     
+                }
             }
         }
+        // replacing bytes (byte 1) of a number
+        unsigned int arg4 = 0x0304;
+        arg4 = arg4  & 0x00ff;
+        printf("arg4= %d\n",arg4);
+        arg4 = arg4  | 0x0600;
+        printf("arg4= %d\n",arg4);
 
         return 0;
 }
